@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar"
+            android:background="@color/top_bar_normal_bg"
+            android:gravity="center_vertical" >
+
+        <TextView
+                android:id="@+id/knowledge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/knowledge"
+                android:textColor="@color/bottom_text_color_normal"
+                android:textSize="18sp" />
+    </RelativeLayout>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button"
+            android:id="@+id/button_test"/>
+
+</LinearLayout>

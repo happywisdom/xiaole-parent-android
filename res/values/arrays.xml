@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chat_viewpage_arrays">
+        <item>最近聊天</item>
+        <item>通讯录</item>
+    </string-array>
+
+    <string-array name="knowledge_viewpage_arrays">
+        <item>全部</item>
+        <item>数学</item>
+        <item>英语</item>
+    </string-array>
+</resources>
