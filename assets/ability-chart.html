@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+    	var chart;
+    	$(function () {
+    		chart2 = new Highcharts.Chart({
+				chart: {
+					renderTo:'container1',
+					animation:true,
+					type: 'bar'
+				},
+				title: {
+					text: null
+				},
+				subtitle: {
+					text: null
+				},
+				xAxis: {
+					categories: ['听音乐', '数学游戏', '识图', '学说话', '听故事', '对话', '古诗游戏', '百科', '英语翻译', '数学计算', '古诗问答', '猜谜'],
+					title: {
+						text: null
+					}
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: '使用时长(分钟)',
+						align: 'high'
+					},
+					labels: {
+						overflow: 'justify'
+					}
+				},
+				tooltip: {
+					valueSuffix: ' 分钟'  ,
+					followTouchMove:false,
+					followPointer:false
+				},
+				plotOptions: {
+					bar: {
+						dataLabels: {
+							enabled: true
+						}
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: '用户',
+					data: [107, 31, 35, 20, 2, 23, 2, 23, 32, 23, 32, 3]
+				}, {
+					color:'#91ed7c',
+					name: '平均',
+					data: [11, 4, 12, 38, 6, 93, 29, 9, 3, 42, 42, 1]
+				}]
+			});
+
+			$('#container').highcharts({
+			    chart: {
+			    	animation:true,
+			        polar: true,
+			        type: 'line',
+			        margin:[0,0,0,0],
+			        spacing:[0,0,0,0]
+			    },
+
+			    credits:{
+ 					enabled:false // 禁用版权信息
+				},
+
+				title:{
+					text:null
+				},
+
+			    pane: {
+			    	size: '75%'
+			    },
+
+			    legend: {
+            		align: 'right',
+            		verticalAlign: 'top',
+            		layout:'vertical',
+            		itemMarginTop:5,
+        		},
+
+			    xAxis: {
+			        categories: ['数学', '语文', '英语', '音乐',
+			                '读写', '常识', '逻辑', '自然'],
+			        tickmarkPlacement: 'on',
+			        lineWidth: 0
+			    },
+
+			    yAxis: {
+			    	floor: 0,
+            		ceiling: 100,
+			        gridLineInterpolation: 'polygon',
+			        lineWidth: 0,
+			        min: 0,
+			        max: 100,
+			        tickInterval: 25
+			    },
+
+			    tooltip: {
+			    	shared: true,
+			        pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br>',
+			        followTouchMove:false,
+			        followPointer:false
+			    },
+
+			    series: [{
+			    	type: 'area',
+			        name: '宝宝',
+			        data: [95, 80, 50, 32, 45, 76, 74, 82],
+			        pointPlacement: 'on'
+			    }, {
+			        name: '均值',
+			        data: [65, 76, 97, 54, 76, 87, 56, 76],
+			        pointPlacement: 'on'
+			    }]
+			});
+		});
+
+		function changeActivity() {
+			window.bridge.changeActivity();
+		}
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+	<script src="file:///android_asset/js/highcharts.js"></script>
+	<script src="file:///android_asset/js/highcharts-more.js"></script>
+	
+	<div id="container" style="width: 100%; height:300px">
+	</div>
+
+	<div>
+		<input type="button" value="test" onclick="changeActivity()">
+	</div>
+
+	<div id="container1" style="width:100%; height:100%">
+	</div>
+</body>
+</html>

@@ -290,24 +290,9 @@ public class ImageGridFragment extends Fragment implements OnItemClickListener {
 			ImageView icon;
 			TextView tvDur;
 			TextView tvSize;
-			
-			
 		}
-		
-		
-		
-		
-		
-		
-		 
 	}
 
-	
-	
-	
-	
-	
-	
 	private void getVideoFile()
 	{
 		ContentResolver mContentResolver=getActivity().getContentResolver();
